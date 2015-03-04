@@ -74,7 +74,7 @@ At this point you have the key and the certificate.
 
 You can use these in the files in the script at the top of these instructions. However you will notice that, as stated previous, the browser won't respect the certificate. You will see a **Your connection is not private** message in Chrome and the URL will show an error with the certificate:
 
-![](ssl-cert.png)
+![](Images/ssl-cert.png)
 
 To fix this, you need to add the certificate as a trusted root authority.
 
@@ -85,21 +85,21 @@ Within Chrome, do the following:
 1. In the address bar, click the little lock with the X. This will bring up a small information screen. Click the button that says "Certificate Information."
 1. Click and drag the image to your desktop. It looks like a little certificate.
 
-![](ssl-get-cert.png)
+![](Images/ssl-get-cert.png)
 
 1. Open the **Keychain Access** utility in OS X.
 1. Select the **System** option on the left.
 1. Click the lock icon in the upper-left corner to enable changes.
 
-![](ssl-keychain-01.png)
+![](Images/ssl-keychain-01.png)
 
 1. Click the plus button at the bottom and select the **localhost.cer** file you copied to the desktop.
 1. In the dialog that comes up, click **Always Trust**.
 1. After **localhost** gets added to the **System** keychain, double-click it to open it again.
 1. Expand the **Trust** section and for the first option, pick **Always Trust**.
 
-![](ssl-keychain-02.png)
+![](Images/ssl-keychain-02.png)
 
 At this point everything has been configured. Quick Chrome and all other browsers and try again to navigate to the local HTTPS site. The browser should report it as a valid certificate:
 
-![](ssl-good.png)
+![](Images/ssl-good.png)

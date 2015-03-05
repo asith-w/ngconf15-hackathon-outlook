@@ -51,18 +51,20 @@ $ openssl req -new -key localhost-key.pem -out localhost.csr
 
 At this stage the **openssl** tool will prompt you for a few more prompts. These values will get added to the certificate request that you are generating to get the private key. What follows is an example of some options you can use. The important point is to use **localhost** for the **Common Name** request.
 
-> Country Name (2 letter code) [AU]:US
-> State or Province Name (full name) [Some-State]:Washington
-> Locality Name (eg, city) []:Redmond
-> Organization Name (eg, company) [Internet Widgits Pty Ltd]:Contoso
-> Organizational Unit Name (eg, section) []:corp
-> Common Name (e.g. server FQDN or YOUR name) []:localhost
-> Email Address []:admin@contoso.com
-> 
-> Please enter the following 'extra' attributes
-> to be sent with your certificate request
-> A challenge password []:
-> An optional company name []:
+````
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Washington
+Locality Name (eg, city) []:Redmond
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:Contoso
+Organizational Unit Name (eg, section) []:corp
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:admin@contoso.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+````
 
 Now create the certificate from the certificate request:
 

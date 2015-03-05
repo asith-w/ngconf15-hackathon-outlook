@@ -69,14 +69,12 @@ An optional company name []:
 Now create the certificate from the certificate request:
 
 ````
-$ openssl x509 -req -in localhost.csr -signkey localhost-key.pem -out
+$ openssl x509 -req -in localhost.csr -signkey localhost-key.pem -out localhost-cert.pem
 ````
 
 At this point you have the key and the certificate.
 
 You can use these in the files in the script at the top of these instructions. However you will notice that, as stated previous, the browser won't respect the certificate. You will see a **Your connection is not private** message in Chrome and the URL will show an error with the certificate:
-
-![](Images/ssl-cert.png)
 
 To fix this, you need to add the certificate as a trusted root authority.
 
